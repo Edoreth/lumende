@@ -1,6 +1,8 @@
+export type Loc = { es: string; en: string };
+
 export const site = {
   name: "LUMENDE",
-  tagline: "Photography / Light / Motion",
+  tagline: { es: "Fotografía / Luz / Movimiento", en: "Photography / Light / Motion" },
   location: "Querétaro, México",
   // TODO(user): supply real values.
   email: "hello@lumende.studio",
@@ -10,25 +12,23 @@ export const site = {
   },
   domain: "lumende.studio",
   url: "https://lumende.studio",
-  description:
-    "LUMENDE is a photography and visual studio exploring the relationship between light, movement and the human figure — editorial, cinematic and experimental imagery made in Querétaro, México.",
 };
 
-export const nav = [
-  { label: "Selected Work", href: "/work" },
-  { label: "Experiments", href: "/experiments" },
-  { label: "Commissions", href: "/commissions" },
-  { label: "About", href: "/about" },
+export const nav: { label: Loc; href: string }[] = [
+  { label: { es: "Trabajo", en: "Selected Work" }, href: "/work" },
+  { label: { es: "Experimentos", en: "Experiments" }, href: "/experiments" },
+  { label: { es: "Encargos", en: "Commissions" }, href: "/commissions" },
+  { label: { es: "Estudio", en: "About" }, href: "/about" },
 ];
 
 /** Discreetly shown inside About / Commissions, never a Services page. */
-export const services = [
-  "Editorial Photography",
-  "Creative Portraits",
-  "Fashion",
-  "Artist Portraits",
-  "Visual Campaigns",
-  "Concept Development",
-  "Light Painting",
-  "Experimental Photography",
+export const services: Loc[] = [
+  { es: "Fotografía Editorial", en: "Editorial Photography" },
+  { es: "Retratos Creativos", en: "Creative Portraits" },
+  { es: "Moda", en: "Fashion" },
+  { es: "Retrato de Artistas", en: "Artist Portraits" },
+  { es: "Campañas Visuales", en: "Visual Campaigns" },
+  { es: "Desarrollo de Concepto", en: "Concept Development" },
+  { es: "Light Painting", en: "Light Painting" },
+  { es: "Fotografía Experimental", en: "Experimental Photography" },
 ];

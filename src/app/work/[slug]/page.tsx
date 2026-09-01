@@ -5,6 +5,7 @@ import Media from "@/components/Media";
 import ProjectStream from "@/components/ProjectStream";
 import { projects, projectMap, nextProject } from "@/data/projects";
 import { group } from "@/lib/media";
+import { T } from "@/i18n/T";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -18,12 +19,12 @@ export async function generateMetadata({
   if (!p) return {};
   const hero = group(p.group)[0];
   return {
-    title: `${p.title} — Selected Work`,
-    description: `${p.concept} ${p.category}, ${p.year}.`,
+    title: p.title,
+    description: `${p.concept.es} ${p.category.es}, ${p.year}.`,
     alternates: { canonical: `/work/${slug}` },
     openGraph: {
       title: `${p.title} — LUMENDE`,
-      description: p.concept,
+      description: p.concept.es,
       images: hero ? [{ url: hero.src, width: hero.w, height: hero.h }] : [],
     },
   };
@@ -46,13 +47,13 @@ export default async function ProjectPage({
       {/* Opening — editorial cover */}
       <header className="px-[var(--pad)] pb-[clamp(2rem,6vh,5rem)] pt-[clamp(7rem,20vh,13rem)]">
         <p className="label mb-8">
-          {p.year} — {p.category}
+          {p.year} — <T es={p.category.es} en={p.category.en} />
         </p>
         <h1 className="display text-ink text-[clamp(3.5rem,15vw,12rem)]">
           {p.title}
         </h1>
         <p className="mt-8 max-w-[24ch] text-[clamp(1.1rem,2.2vw,1.6rem)] leading-snug text-ink-dim">
-          {p.concept}
+          <T es={p.concept.es} en={p.concept.en} />
         </p>
       </header>
 
@@ -67,23 +68,29 @@ export default async function ProjectPage({
       {/* Description + credits */}
       <section className="grid grid-cols-1 gap-[clamp(2rem,6vw,5rem)] border-t border-line px-[var(--pad)] py-[clamp(4rem,12vh,9rem)] md:grid-cols-[1.4fr_1fr]">
         <p className="measure text-[clamp(1.1rem,1.7vw,1.4rem)] leading-relaxed text-ink">
-          {p.description}
+          <T es={p.description.es} en={p.description.en} />
         </p>
         <dl className="flex flex-col gap-4 self-start md:pt-2">
           <div className="flex items-baseline justify-between border-b border-line pb-3">
-            <dt className="label">Title</dt>
+            <dt className="label">
+              <T es="Título" en="Title" />
+            </dt>
             <dd className="font-serif text-lg text-ink">{p.title}</dd>
           </div>
           <div className="flex items-baseline justify-between border-b border-line pb-3">
-            <dt className="label">Year</dt>
+            <dt className="label">
+              <T es="Año" en="Year" />
+            </dt>
             <dd className="font-serif text-lg text-ink">{p.year}</dd>
           </div>
           {p.credits.map((c) => (
             <div
-              key={c.role}
+              key={c.role.en}
               className="flex items-baseline justify-between border-b border-line pb-3"
             >
-              <dt className="label">{c.role}</dt>
+              <dt className="label">
+                <T es={c.role.es} en={c.role.en} />
+              </dt>
               <dd className="font-serif text-lg text-ink">{c.name}</dd>
             </div>
           ))}
@@ -98,7 +105,7 @@ export default async function ProjectPage({
         {nextPreview && (
           <Media
             item={nextPreview}
-            alt={`${next.title} — next project`}
+            alt={`${next.title} — ${next.category.es}`}
             sizes="100vw"
             reveal="none"
             fill
@@ -107,7 +114,9 @@ export default async function ProjectPage({
         )}
         <div className="absolute inset-0 bg-ground/40" />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="label !text-white/80">Next Project →</span>
+          <span className="label !text-white/80">
+            <T es="Siguiente proyecto →" en="Next Project →" />
+          </span>
           <span className="display mt-3 text-white text-[clamp(2.5rem,10vw,8rem)]">
             {next.title}
           </span>

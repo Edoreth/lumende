@@ -1,4 +1,6 @@
 import type { MediaItem } from "@/lib/media";
+import type { Loc } from "@/data/site";
+import { T } from "@/i18n/T";
 import Media from "./Media";
 
 type Block =
@@ -7,14 +9,17 @@ type Block =
   | { kind: "portrait"; a: MediaItem; side: "left" | "right" | "center" }
   | { kind: "duo"; a: MediaItem; b: MediaItem }
   | { kind: "detail"; a: MediaItem; side: "left" | "right" }
-  | { kind: "text"; text: string };
+  | { kind: "text"; text: Loc };
+
+const EMPTY: Loc = { es: "", en: "" };
 
 /**
  * Compose an editorial vertical narrative from a project's images.
  * Rhythm varies per project via `offset`, and orientation steers block choice
  * so portraits become tall columns and landscapes become full-bleed frames.
  */
-function buildStream(items: MediaItem[], offset: number, concept: string): Block[] {
+function buildStream(items: MediaItem[], offset: number, concept: Loc): Block[] {
+  const hasConcept = !!concept?.es || !!concept?.en;
   const blocks: Block[] = [];
   const L = items.filter((i) => i.orientation !== "portrait"); // landscape + square
   const P = items.filter((i) => i.orientation === "portrait");
@@ -34,7 +39,7 @@ function buildStream(items: MediaItem[], offset: number, concept: string): Block
       blocks.push({ kind: "portrait", a: P.shift()!, side: sides[i % 3] });
     } else if (step === 1 && P.length >= 2) {
       blocks.push({ kind: "duo", a: P.shift()!, b: P.shift()! });
-    } else if (step === 2 && !textPlaced && concept) {
+    } else if (step === 2 && !textPlaced && hasConcept) {
       blocks.push({ kind: "text", text: concept });
       textPlaced = true;
     } else if (step === 3 && L.length) {
@@ -53,7 +58,7 @@ function buildStream(items: MediaItem[], offset: number, concept: string): Block
     i++;
   }
 
-  if (!textPlaced && concept) {
+  if (!textPlaced && hasConcept) {
     blocks.splice(Math.min(3, blocks.length), 0, { kind: "text", text: concept });
   }
   return blocks;
@@ -63,12 +68,12 @@ export default function ProjectStream({
   items,
   title,
   offset = 0,
-  concept = "",
+  concept = EMPTY,
 }: {
   items: MediaItem[];
   title: string;
   offset?: number;
-  concept?: string;
+  concept?: Loc;
 }) {
   const blocks = buildStream(items, offset, concept);
 
@@ -164,7 +169,7 @@ export default function ProjectStream({
                   className="display mx-auto max-w-[16ch] text-center text-[clamp(1.75rem,4.5vw,3.5rem)] text-ink"
                   data-reveal="rise"
                 >
-                  {b.text}
+                  <T es={b.text.es} en={b.text.en} />
                 </p>
               </div>
             );

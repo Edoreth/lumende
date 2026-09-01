@@ -3,14 +3,16 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { MediaItem } from "@/lib/media";
+import type { Loc } from "@/data/site";
+import { T } from "@/i18n/T";
 import Media from "./Media";
 
 export type WorkEntry = {
   slug: string;
   title: string;
   year: string;
-  category: string;
-  concept: string;
+  category: Loc;
+  concept: Loc;
   preview: MediaItem;
 };
 
@@ -93,11 +95,13 @@ export default function SelectedWork({ entries }: { entries: WorkEntry[] }) {
                   className="label hidden translate-y-[-0.3em] transition-opacity duration-500 lg:inline"
                   style={{ opacity: active === i ? 1 : 0 }}
                 >
-                  {e.concept}
+                  <T es={e.concept.es} en={e.concept.en} />
                 </span>
               </span>
               <span className="flex items-baseline gap-6 whitespace-nowrap">
-                <span className="label">{e.category}</span>
+                <span className="label">
+                  <T es={e.category.es} en={e.category.en} />
+                </span>
                 <span className="label !text-ink">{e.year}</span>
               </span>
             </Link>
@@ -111,7 +115,7 @@ export default function SelectedWork({ entries }: { entries: WorkEntry[] }) {
           <Link key={e.slug} href={`/work/${e.slug}`} className="block">
             <Media
               item={e.preview}
-              alt={`${e.title} — ${e.category}`}
+              alt={`${e.title} — ${e.category.es}`}
               sizes="100vw"
               reveal="mask"
             />
@@ -121,8 +125,12 @@ export default function SelectedWork({ entries }: { entries: WorkEntry[] }) {
               </h3>
               <span className="label !text-ink">{e.year}</span>
             </div>
-            <p className="label mt-1">{e.category}</p>
-            <p className="mt-3 measure text-sm text-ink-dim">{e.concept}</p>
+            <p className="label mt-1">
+              <T es={e.category.es} en={e.category.en} />
+            </p>
+            <p className="mt-3 measure text-sm text-ink-dim">
+              <T es={e.concept.es} en={e.concept.en} />
+            </p>
           </Link>
         ))}
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { T } from "@/i18n/T";
 
 type Phase = "in" | "out" | "gone";
 
@@ -46,7 +47,9 @@ export default function Loader() {
       <div className="loader-word display text-ink text-[clamp(2.5rem,9vw,7rem)]">
         LUMENDE
       </div>
-      <p className="loader-tag label mt-6">Photography / Light / Motion</p>
+      <p className="loader-tag label mt-6">
+        <T es="Fotografía / Luz / Movimiento" en="Photography / Light / Motion" />
+      </p>
     </div>
   );
 }

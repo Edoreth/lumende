@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav, site } from "@/data/site";
+import { T } from "@/i18n/T";
+import LangToggle from "./LangToggle";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -53,10 +55,12 @@ export default function Nav() {
                 className="font-sans text-[0.68rem] font-medium uppercase tracking-[0.22em] text-white transition-opacity hover:opacity-100"
                 style={{ opacity: active ? 1 : 0.62 }}
               >
-                {item.label}
+                <T es={item.label.es} en={item.label.en} />
               </Link>
             );
           })}
+          <span className="ml-2 h-3 w-px bg-white/25" aria-hidden />
+          <LangToggle />
         </nav>
 
         {/* Mobile toggle */}
@@ -67,7 +71,7 @@ export default function Nav() {
           aria-expanded={open}
           aria-label="Menu"
         >
-          {open ? "Close" : "Menu"}
+          {open ? <T es="Cerrar" en="Close" /> : <T es="Menú" en="Menu" />}
         </button>
       </header>
 
@@ -91,11 +95,12 @@ export default function Nav() {
               }}
               tabIndex={open ? 0 : -1}
             >
-              {item.label}
+              <T es={item.label.es} en={item.label.en} />
             </Link>
           ))}
         </nav>
-        <div className="mt-16 flex flex-col gap-1">
+        <div className="mt-16 flex flex-col gap-3">
+          <LangToggle className="!text-ink [&_button]:!text-ink" />
           <span className="label">{site.location}</span>
           <a href={site.instagram.url} className="label hover:text-ink">
             Instagram

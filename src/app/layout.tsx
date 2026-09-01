@@ -23,53 +23,64 @@ const bodoni = Bodoni_Moda({
   display: "swap",
 });
 
+const descriptionEs =
+  "LUMENDE es un estudio de fotografía y creación visual que explora la relación entre la luz, el movimiento y la figura humana — imágenes editoriales, cinematográficas y experimentales hechas en Querétaro, México.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "LUMENDE — Photography / Light / Motion",
+    default: "LUMENDE — Fotografía / Luz / Movimiento",
     template: "%s — LUMENDE",
   },
-  description: site.description,
+  description: descriptionEs,
   keywords: [
     "Lumende Studio",
+    "Fotógrafo editorial Querétaro",
+    "Fotografía creativa México",
+    "Fotógrafo de moda Querétaro",
+    "Fotografía experimental",
+    "Light painting",
+    "Retrato creativo",
     "Editorial Photographer Querétaro",
     "Creative Photographer Mexico",
-    "Fashion Photographer Querétaro",
-    "Experimental Photography",
-    "Light Painting Photography",
-    "Creative Portrait Photography",
   ],
   authors: [{ name: "LUMENDE" }],
   openGraph: {
     type: "website",
     siteName: "LUMENDE",
-    title: "LUMENDE — Photography / Light / Motion",
-    description: site.description,
+    title: "LUMENDE — Fotografía / Luz / Movimiento",
+    description: descriptionEs,
     url: site.url,
-    locale: "en_US",
+    locale: "es_MX",
+    alternateLocale: ["en_US"],
     images: [
       {
         url: "/media/nightmare/nightmare-16-1280.webp",
         width: 1280,
-        alt: "LUMENDE — figures traced in light",
+        alt: "LUMENDE — figuras trazadas con luz",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LUMENDE — Photography / Light / Motion",
-    description: site.description,
+    title: "LUMENDE — Fotografía / Luz / Movimiento",
+    description: descriptionEs,
   },
   alternates: { canonical: "/" },
 };
 
+// Applies the visitor's saved language before first paint (no flash).
+const langInit = `try{var l=localStorage.getItem('lumende-lang');if(l==='en'){document.documentElement.dataset.lang='en';document.documentElement.lang='en';}}catch(e){}`;
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="es"
+      suppressHydrationWarning
       className={`${archivo.variable} ${bodoni.variable} antialiased`}
     >
       <body className="min-h-screen bg-ground text-ink">
+        <script dangerouslySetInnerHTML={{ __html: langInit }} />
         <SmoothScroll />
         <RevealProvider />
         <Loader />

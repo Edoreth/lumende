@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/data/site";
+import { T } from "@/i18n/T";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -13,7 +14,9 @@ export default function Footer() {
           >
             {site.name}
           </Link>
-          <p className="label mt-3">{site.tagline}</p>
+          <p className="label mt-3">
+            <T es={site.tagline.es} en={site.tagline.en} />
+          </p>
         </div>
         <div className="flex flex-col gap-2 md:items-end">
           <span className="label">{site.location}</span>

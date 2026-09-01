@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import { site } from "@/data/site";
+import { T } from "@/i18n/T";
 
 const fields = [
-  { name: "name", label: "Name", type: "text", autoComplete: "name" },
-  { name: "email", label: "Email", type: "email", autoComplete: "email" },
-  { name: "project", label: "Project", type: "text", autoComplete: "off" },
+  { name: "name", label: { es: "Nombre", en: "Name" }, type: "text", autoComplete: "name" },
+  { name: "email", label: { es: "Correo", en: "Email" }, type: "email", autoComplete: "email" },
+  { name: "project", label: { es: "Proyecto", en: "Project" }, type: "text", autoComplete: "off" },
 ] as const;
 
 export default function ContactForm() {
@@ -40,7 +41,9 @@ export default function ContactForm() {
     <form onSubmit={submit} className="flex flex-col gap-8">
       {fields.map((f) => (
         <label key={f.name} className="group flex flex-col gap-2">
-          <span className="label">{f.label}</span>
+          <span className="label">
+            <T es={f.label.es} en={f.label.en} />
+          </span>
           <input
             type={f.type}
             name={f.name}
@@ -53,7 +56,9 @@ export default function ContactForm() {
         </label>
       ))}
       <label className="flex flex-col gap-2">
-        <span className="label">Message</span>
+        <span className="label">
+          <T es="Mensaje" en="Message" />
+        </span>
         <textarea
           name="message"
           rows={3}
@@ -67,7 +72,7 @@ export default function ContactForm() {
         type="submit"
         className="label mt-4 self-start border border-line px-8 py-4 !text-ink transition-colors hover:border-ink hover:bg-ink hover:!text-ground"
       >
-        Send Inquiry
+        <T es="Enviar mensaje" en="Send Inquiry" />
       </button>
     </form>
   );

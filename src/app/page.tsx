@@ -4,6 +4,7 @@ import SelectedWork, { type WorkEntry } from "@/components/SelectedWork";
 import { projects } from "@/data/projects";
 import { group } from "@/lib/media";
 import { site } from "@/data/site";
+import { T } from "@/i18n/T";
 
 const heroItem =
   group("nightmare").find((i) => i.id === "nightmare-16") ??
@@ -26,7 +27,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <Media
             item={heroItem}
-            alt="LUMENDE — figures traced in light against a red and blue room, long exposure"
+            alt="LUMENDE — figuras trazadas con luz en una habitación roja y azul, larga exposición"
             sizes="100vw"
             reveal="none"
             priority
@@ -46,18 +47,22 @@ export default function Home() {
             {site.name}
           </h1>
           <p className="label mt-4 !text-white/90 !tracking-[0.34em]">
-            {site.tagline}
+            <T es={site.tagline.es} en={site.tagline.en} />
           </p>
         </div>
         <div className="absolute inset-x-0 bottom-8 flex justify-center">
-          <span className="label !text-white/70 animate-pulse">Scroll</span>
+          <span className="label !text-white/70 animate-pulse">
+            <T es="Desliza" en="Scroll" />
+          </span>
         </div>
       </section>
 
       {/* SELECTED WORK */}
       <section className="px-[var(--pad)] py-[clamp(4rem,12vh,9rem)]">
         <div className="mb-[clamp(2rem,6vh,5rem)] flex items-baseline justify-between">
-          <h2 className="label">Selected Work</h2>
+          <h2 className="label">
+            <T es="Trabajo Seleccionado" en="Selected Work" />
+          </h2>
           <span className="label !text-ink-faint">
             {String(projects.length).padStart(2, "0")} — 2026
           </span>
@@ -68,9 +73,21 @@ export default function Home() {
       {/* LEAD INTO THE REST */}
       <section className="grid grid-cols-1 gap-px border-t border-line md:grid-cols-3">
         {[
-          { href: "/experiments", label: "Experiments", line: "Light, exposure and accident." },
-          { href: "/commissions", label: "Commissions", line: "For fashion, artists and brands." },
-          { href: "/about", label: "About", line: "The studio behind the light." },
+          {
+            href: "/experiments",
+            label: { es: "Experimentos", en: "Experiments" },
+            line: { es: "Luz, exposición y accidente.", en: "Light, exposure and accident." },
+          },
+          {
+            href: "/commissions",
+            label: { es: "Encargos", en: "Commissions" },
+            line: { es: "Para moda, artistas y marcas.", en: "For fashion, artists and brands." },
+          },
+          {
+            href: "/about",
+            label: { es: "Estudio", en: "About" },
+            line: { es: "El estudio detrás de la luz.", en: "The studio behind the light." },
+          },
         ].map((c) => (
           <Link
             key={c.href}
@@ -82,9 +99,11 @@ export default function Home() {
             </span>
             <span>
               <span className="display block text-ink text-[clamp(2rem,5vw,3.75rem)]">
-                {c.label}
+                <T es={c.label.es} en={c.label.en} />
               </span>
-              <span className="mt-2 block text-sm text-ink-dim">{c.line}</span>
+              <span className="mt-2 block text-sm text-ink-dim">
+                <T es={c.line.es} en={c.line.en} />
+              </span>
             </span>
           </Link>
         ))}

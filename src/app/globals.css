@@ -166,6 +166,17 @@ html.lenis body {
   transform: scale(1);
 }
 
+/* ---------- i18n: Spanish is default; [data-lang="en"] flips to English ---------- */
+[data-l="en"] {
+  display: none;
+}
+:root[data-lang="en"] [data-l="en"] {
+  display: inline;
+}
+:root[data-lang="en"] [data-l="es"] {
+  display: none;
+}
+
 /* Floating project preview (Selected Work hover) */
 .preview-in {
   animation: previewIn 0.55s var(--ease-out) both;

@@ -3,10 +3,12 @@ import Link from "next/link";
 import Media from "@/components/Media";
 import { group } from "@/lib/media";
 import { site } from "@/data/site";
+import { T } from "@/i18n/T";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: site.description,
+  title: "Estudio",
+  description:
+    "LUMENDE es un estudio de fotografía y creación visual que explora la relación entre la luz, el movimiento y la figura humana. Con base en Querétaro, México.",
   alternates: { canonical: "/about" },
 };
 
@@ -21,31 +23,46 @@ export default function AboutPage() {
         <div className="w-full md:max-w-[460px]">
           <Media
             item={portrait}
-            alt="A LUMENDE portrait — a figure wrapped in projected light"
+            alt="Retrato de LUMENDE — una figura envuelta en luz proyectada"
             sizes="(max-width:768px) 100vw, 40vw"
             reveal="mask"
           />
         </div>
 
         <div>
-          <h1 className="label mb-8">About</h1>
+          <h1 className="label mb-8">
+            <T es="Estudio" en="About" />
+          </h1>
           <p className="display max-w-[15ch] text-[clamp(2rem,5vw,4rem)] text-ink">
-            Images somewhere between reality and fiction.
+            <T
+              es="Imágenes entre la realidad y la ficción."
+              en="Images somewhere between reality and fiction."
+            />
           </p>
           <div className="mt-10 max-w-[52ch] space-y-6 text-[clamp(1.05rem,1.5vw,1.3rem)] leading-relaxed text-ink-dim">
             <p>
-              LUMENDE is a photography and visual studio exploring the
-              relationship between light, movement and the human figure.
+              <T
+                es="LUMENDE es un estudio de fotografía y creación visual que explora la relación entre la luz, el movimiento y la figura humana."
+                en="LUMENDE is a photography and visual studio exploring the relationship between light, movement and the human figure."
+              />
             </p>
             <p>
-              The work combines editorial photography, cinematic lighting, long
-              exposure and experimental techniques to create images somewhere
-              between reality and fiction.
+              <T
+                es="El trabajo combina fotografía editorial, iluminación cinematográfica, larga exposición y técnicas experimentales para crear imágenes entre la realidad y la ficción."
+                en="The work combines editorial photography, cinematic lighting, long exposure and experimental techniques to create images somewhere between reality and fiction."
+              />
             </p>
-            <p className="text-ink">Based in {site.location}.</p>
+            <p className="text-ink">
+              <T
+                es={`Con base en ${site.location}.`}
+                en={`Based in ${site.location}.`}
+              />
+            </p>
             <p>
-              Available for editorial commissions, creative collaborations and
-              selected commercial projects.
+              <T
+                es="Disponible para encargos editoriales, colaboraciones creativas y proyectos comerciales seleccionados."
+                en="Available for editorial commissions, creative collaborations and selected commercial projects."
+              />
             </p>
           </div>
           <div className="mt-10 flex gap-8">
@@ -53,7 +70,7 @@ export default function AboutPage() {
               href="/contact"
               className="label border-b border-line pb-1 transition-colors hover:!text-ink hover:border-ink"
             >
-              Contact →
+              <T es="Contacto →" en="Contact →" />
             </Link>
             <a
               href={site.instagram.url}
