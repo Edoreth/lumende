@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+/* ============================================================
+   LUMENDE — design tokens
+   Drenched near-black gallery. Color comes only from photographs.
+   ============================================================ */
+
+:root {
+  --ink: #e8e6e1; /* warm off-white foreground */
+  --ink-dim: #8a8a85; /* muted grey — labels, metadata */
+  --ink-faint: #4a4a47; /* hairlines, disabled */
+  --ground: #060606; /* near-black ground */
+  --ground-raise: #0d0d0c; /* barely-raised panels */
+  --line: rgba(232, 230, 225, 0.14); /* hairline dividers */
+  --line-strong: rgba(232, 230, 225, 0.28);
+
+  /* editorial motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* exponential ease-out */
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-slow: 1.1s;
+  --dur-med: 0.7s;
+
+  --pad: clamp(1.25rem, 4vw, 4rem); /* page gutter */
+}
+
+@theme inline {
+  --color-ground: var(--ground);
+  --color-ground-raise: var(--ground-raise);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+
+  --font-serif: var(--font-bodoni);
+  --font-sans: var(--font-archivo);
+
+  --tracking-label: 0.22em;
+}
+
+* {
+  min-width: 0;
+}
+
+html {
+  background: var(--ground);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Lenis controls scroll; keep native smooth off */
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- Browser surfaces themed from the palette ---------- */
+::selection {
+  background: var(--ink);
+  color: var(--ground);
+}
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ground);
+}
+::-webkit-scrollbar-thumb {
+  background: #26261f;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a30;
+}
+html {
+  scrollbar-color: #26261f var(--ground);
+}
+
+:focus-visible {
+  outline: 1px solid var(--ink);
+  outline-offset: 3px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Type helpers ---------- */
+.font-serif {
+  font-family: var(--font-serif), "Times New Roman", serif;
+}
+.font-sans {
+  font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+}
+
+.label {
+  font-family: var(--font-sans), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--ink-dim);
+}
+
+.display {
+  font-family: var(--font-serif), serif;
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+}
+
+.measure {
+  max-width: 42ch;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+/* ---------- Reveal (Intersection-driven) ---------- */
+[data-reveal] {
+  opacity: 0;
+}
+[data-reveal="fade"] {
+  transition: opacity var(--dur-slow) var(--ease-out);
+}
+[data-reveal="rise"] {
+  transform: translateY(28px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+}
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Image mask-wipe reveal */
+.media-mask {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path var(--dur-slow) var(--ease-out);
+}
+.media-mask.is-in {
+  clip-path: inset(0 0 0 0);
+}
+.media-scale {
+  transform: scale(1.08);
+  transition: transform 1.6s var(--ease-out);
+}
+.media-scale.is-in {
+  transform: scale(1);
+}
+
+/* Floating project preview (Selected Work hover) */
+.preview-in {
+  animation: previewIn 0.55s var(--ease-out) both;
+}
+@keyframes previewIn {
+  from {
+    opacity: 0;
+    filter: blur(14px);
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+/* Loader intro */
+.loader-word {
+  animation: loaderWord 1.2s var(--ease-out) both;
+}
+.loader-tag {
+  animation: loaderTag 0.9s 0.5s var(--ease-out) both;
+}
+@keyframes loaderWord {
+  from {
+    opacity: 0;
+    letter-spacing: 0.45em;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.08em;
+  }
+}
+@keyframes loaderTag {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  .media-mask,
+  .media-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+  .loader-word,
+  .loader-tag {
+    animation: none;
+  }
+}
