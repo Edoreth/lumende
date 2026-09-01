@@ -4,9 +4,10 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 /**
- * Reveals scroll targets by adding `.is-in`. Primary trigger is an
- * IntersectionObserver; a passive scroll listener is a safety net so nothing
- * ever stays hidden (a reveal that never fires would leave blank gaps).
+ * Reveals scroll targets by setting `data-in` (an attribute React never
+ * renders, so imperatively adding it can't cause a hydration mismatch on the
+ * React-controlled className). Primary trigger is an IntersectionObserver; a
+ * passive scroll listener is a safety net so nothing ever stays hidden.
  * Re-scans on route change.
  */
 export default function RevealProvider() {
@@ -21,10 +22,10 @@ export default function RevealProvider() {
     const remaining = () =>
       Array.from(
         document.querySelectorAll<HTMLElement>(SEL)
-      ).filter((el) => !el.classList.contains("is-in"));
+      ).filter((el) => !el.hasAttribute("data-in"));
 
     if (reduce) {
-      remaining().forEach((el) => el.classList.add("is-in"));
+      remaining().forEach((el) => el.setAttribute("data-in", ""));
       return;
     }
 
@@ -32,7 +33,7 @@ export default function RevealProvider() {
       const h = window.innerHeight;
       for (const el of remaining()) {
         const r = el.getBoundingClientRect();
-        if (r.top < h * 0.95 && r.bottom > 0) el.classList.add("is-in");
+        if (r.top < h * 0.95 && r.bottom > 0) el.setAttribute("data-in", "");
       }
     };
 
@@ -43,7 +44,7 @@ export default function RevealProvider() {
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-in");
+            entry.target.setAttribute("data-in", "");
             io.unobserve(entry.target);
           }
         }

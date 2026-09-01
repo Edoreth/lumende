@@ -145,7 +145,7 @@ html.lenis body {
   transition: opacity var(--dur-slow) var(--ease-out),
     transform var(--dur-slow) var(--ease-out);
 }
-[data-reveal].is-in {
+[data-reveal][data-in] {
   opacity: 1;
   transform: none;
 }
@@ -158,7 +158,7 @@ html.lenis body {
   transition: opacity var(--dur-slow) var(--ease-out),
     transform var(--dur-slow) var(--ease-out);
 }
-.media-mask.is-in {
+.media-mask[data-in] {
   opacity: 1;
   transform: none;
 }
@@ -167,7 +167,7 @@ html.lenis body {
   transform: scale(1.06);
   transition: opacity 1.4s var(--ease-out), transform 1.6s var(--ease-out);
 }
-.media-scale.is-in {
+.media-scale[data-in] {
   opacity: 1;
   transform: scale(1);
 }

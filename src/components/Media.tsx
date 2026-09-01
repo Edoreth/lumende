@@ -49,6 +49,9 @@ export default function Media({
 
   return (
     <figure
+      // RevealProvider sets data-in on this element before the (Suspense-
+      // deferred) subtree hydrates; suppress the resulting attribute warning.
+      suppressHydrationWarning
       className={`relative overflow-hidden bg-ground-raise ${
         fill ? "h-full w-full" : ""
       } ${revealClass} ${className}`}
