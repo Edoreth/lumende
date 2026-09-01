@@ -150,19 +150,25 @@ html.lenis body {
   transform: none;
 }
 
-/* Image mask-wipe reveal */
+/* Image reveal — opacity + rise (NOT clip-path: clip-path makes the element
+   register 0 intersection, so IntersectionObserver would never reveal it). */
 .media-mask {
-  clip-path: inset(0 0 100% 0);
-  transition: clip-path var(--dur-slow) var(--ease-out);
+  opacity: 0;
+  transform: translateY(26px) scale(1.02);
+  transition: opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
 }
 .media-mask.is-in {
-  clip-path: inset(0 0 0 0);
+  opacity: 1;
+  transform: none;
 }
 .media-scale {
-  transform: scale(1.08);
-  transition: transform 1.6s var(--ease-out);
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 1.4s var(--ease-out), transform 1.6s var(--ease-out);
 }
 .media-scale.is-in {
+  opacity: 1;
   transform: scale(1);
 }
 
