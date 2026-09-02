@@ -39,26 +39,26 @@ export const projects: Project[] = [
   },
   {
     slug: "fera",
-    title: "Fera",
+    title: "Fairy's and Aliens",
     year: "2026",
     category: {
-      es: "Moda / Fotografía de Arte",
-      en: "Fashion / Fine Art Photography",
+      es: "Conceptual / Experimental",
+      en: "Conceptual / Experimental",
     },
     concept: {
-      es: "La figura humana disolviéndose en algo feral.",
-      en: "The human figure dissolving into something feral.",
+      es: "Una humana que se descubre como un hada alienígena.",
+      en: "A human discovering herself as an alien fairy.",
     },
     description: {
-      es: "Fera pone en escena el cuerpo como una criatura atrapada en plena transformación: mitad moda, mitad aparición. Mundos proyectados envuelven la piel, y el estudio se vuelve el hábitat de algo que nunca fue del todo humano.",
-      en: "Fera stages the body as a creature caught mid-transformation — half fashion, half apparition. Projected worlds wrap the skin, and the studio becomes a habitat for something that was never quite human.",
+      es: "En la frontera entre lo humano y lo extraño, el cuerpo se transforma en criatura. Mitad hada, mitad aparición de otro mundo: mundos proyectados envuelven la piel y el estudio se vuelve el hábitat de algo que apenas empieza a reconocerse.",
+      en: "On the border between the human and the strange, the body turns into a creature. Half fairy, half apparition from another world — projected worlds wrap the skin and the studio becomes the habitat of something only beginning to recognise itself.",
     },
     group: "fera",
     credits: [PHOTO],
   },
   {
     slug: "afterimage",
-    title: "Afterimage",
+    title: "Reverie Luminare",
     year: "2026",
     category: {
       es: "Larga Exposición / Fotografía Experimental",
@@ -77,21 +77,40 @@ export const projects: Project[] = [
   },
   {
     slug: "nocturne",
-    title: "Nocturne",
+    title: "Japan",
     year: "2026",
     category: {
       es: "Fotografía / Movimiento",
       en: "Photography / Motion",
     },
     concept: {
-      es: "La quietud registrada en las horas que el mundo olvida.",
-      en: "Stillness recorded in the hours the world forgets.",
+      es: "Invierno japonés.",
+      en: "Japanese winter.",
     },
     description: {
-      es: "Un estudio silencioso de la luz azul, la distancia y el frío. Nocturne desacelera la mirada al ritmo de la noche —nieve, silueta y el silencio entre cuadros— donde la imagen es menos una fotografía que un aliento contenido.",
-      en: "A quiet study of blue light, distance and cold. Nocturne slows the eye to the pace of the night — snow, silhouette and the hush between frames — where the image is less a photograph than a held breath.",
+      es: "Un estudio silencioso de la luz azul, la distancia y el frío. Nieve, silueta y el silencio entre cuadros: el invierno japonés desacelera la mirada hasta que la imagen es menos una fotografía que un aliento contenido.",
+      en: "A quiet study of blue light, distance and cold. Snow, silhouette and the hush between frames — the Japanese winter slows the eye until the image is less a photograph than a held breath.",
     },
     group: "nocturne",
+    credits: [PHOTO],
+  },
+  {
+    slug: "yoga",
+    title: "Yoga and Light",
+    year: "2026",
+    category: {
+      es: "Movimiento / Larga Exposición",
+      en: "Movement / Long Exposure",
+    },
+    concept: {
+      es: "El cuerpo dibujado con luz.",
+      en: "The body drawn in light.",
+    },
+    description: {
+      es: "La respiración y la postura convertidas en trazo. Cada asana deja su firma luminosa en el aire: una meditación sobre el equilibrio entre quietud y movimiento, escrita con luz sobre el cuerpo.",
+      en: "Breath and posture turned into line. Each asana leaves its luminous signature in the air — a meditation on the balance between stillness and motion, written in light across the body.",
+    },
+    group: "yoga",
     credits: [PHOTO],
   },
 ];

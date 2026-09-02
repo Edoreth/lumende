@@ -55,9 +55,9 @@ export const metadata: Metadata = {
     alternateLocale: ["en_US"],
     images: [
       {
-        url: "/media/nightmare/nightmare-16-1280.webp",
+        url: "/media/nightmare/nightmare-01-1280.webp",
         width: 1280,
-        alt: "LUMENDE — figuras trazadas con luz",
+        alt: "LUMENDE — figura trazada con luz",
       },
     ],
   },
