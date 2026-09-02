@@ -6,7 +6,7 @@ import { group } from "@/lib/media";
 import { site } from "@/data/site";
 import { T } from "@/i18n/T";
 
-const heroItem = group("nightmare")[0];
+const heroItem = group("hero")[0] ?? group("nightmare")[0];
 
 const entries: WorkEntry[] = projects.map((p) => ({
   slug: p.slug,
@@ -25,7 +25,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <Media
             item={heroItem}
-            alt="LUMENDE — figura editorial trazada con luz sobre fondo rojo, larga exposición"
+            alt="LUMENDE — dos figuras trazadas con luz roja y azul, larga exposición"
             sizes="100vw"
             reveal="none"
             priority

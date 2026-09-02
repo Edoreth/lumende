@@ -4,8 +4,7 @@ export const site = {
   name: "LUMENDE",
   tagline: { es: "Fotografía / Luz / Movimiento", en: "Photography / Light / Motion" },
   location: "Querétaro, México",
-  // TODO(user): supply real values.
-  email: "hello@lumende.studio",
+  email: "lumende.studio@gmail.com",
   instagram: {
     handle: "@lumende.studio",
     url: "https://instagram.com/lumende.studio",

@@ -1,4 +1,40 @@
 {
+  "hero": [
+    {
+      "id": "hero-01",
+      "orientation": "landscape",
+      "w": 6000,
+      "h": 4000,
+      "ratio": 1.5,
+      "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoYABAAPu1iqU2ppaOiMAgBMB2JbACdMoAA5crK6EeYGrKAAP7o7eMwz7ZAJ4hqXtYkQ5TtTJjZTXyqdDa4eR4gqcT2jIhxh/WXY8rB0KUC2GpYW1nj9FW0BPwAAA==",
+      "widths": [
+        400,
+        800,
+        1280,
+        1920
+      ],
+      "srcset": "/media/hero/hero-01-400.webp 400w, /media/hero/hero-01-800.webp 800w, /media/hero/hero-01-1280.webp 1280w, /media/hero/hero-01-1920.webp 1920w",
+      "src": "/media/hero/hero-01-1920.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/hero/hero-01-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/hero/hero-01-800.webp"
+        },
+        {
+          "w": 1280,
+          "src": "/media/hero/hero-01-1280.webp"
+        },
+        {
+          "w": 1920,
+          "src": "/media/hero/hero-01-1920.webp"
+        }
+      ]
+    }
+  ],
   "nightmare": [
     {
       "id": "nightmare-01",
