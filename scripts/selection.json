@@ -121,7 +121,7 @@
     "Seleccion/Yoga and Light/DSC09018.jpg",
     "Seleccion/Yoga and Light/DSC09020.jpg"
   ],
-  "experiments": [
+  "blue": [
     "Seleccion/Blue/DSC04647.jpg",
     "Seleccion/Blue/DSC04660.jpg",
     "Seleccion/Blue/DSC04662.jpg",
@@ -134,6 +134,33 @@
     "Seleccion/Blue/DSC05100.jpg",
     "Seleccion/Blue/DSC05109.jpg",
     "Seleccion/Blue/x.jpg"
+  ],
+  "experiments": [
+    "Seleccion/Experiments/DSC04039.jpg",
+    "Seleccion/Experiments/DSC04101.jpg",
+    "Seleccion/Experiments/DSC04102.jpg",
+    "Seleccion/Experiments/DSC04207.jpg",
+    "Seleccion/Experiments/DSC04213.jpg",
+    "Seleccion/Experiments/DSC05709.jpg",
+    "Seleccion/Experiments/DSC05769.jpg",
+    "Seleccion/Experiments/DSC05778.jpg",
+    "Seleccion/Experiments/DSC05803.jpg",
+    "Seleccion/Experiments/DSC05807.jpg",
+    "Seleccion/Experiments/DSC05808.jpg",
+    "Seleccion/Experiments/DSC05809.jpg",
+    "Seleccion/Experiments/DSC06480.jpg",
+    "Seleccion/Experiments/DSC06481.jpg",
+    "Seleccion/Experiments/DSC06791.jpg",
+    "Seleccion/Experiments/DSC06797.jpg",
+    "Seleccion/Experiments/DSC07421.jpg",
+    "Seleccion/Experiments/DSC07784.jpg",
+    "Seleccion/Experiments/DSC07804.jpg",
+    "Seleccion/Experiments/DSC08650.jpg",
+    "Seleccion/Experiments/DSC08655.jpg",
+    "Seleccion/Experiments/DSC08658.jpg",
+    "Seleccion/Experiments/DSC08797.jpg",
+    "Seleccion/Experiments/DSC08799.jpg",
+    "Seleccion/Experiments/DSC08811.jpg"
   ],
   "commissions": [
     "Seleccion/Comisions/DSC07081.jpg",

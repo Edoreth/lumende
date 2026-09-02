@@ -133,6 +133,25 @@ export const projects: Project[] = [
     credits: [PHOTO],
   },
   {
+    slug: "blue",
+    title: "Blue",
+    year: "2026",
+    category: {
+      es: "Boudoir Editorial / Fotografía Experimental",
+      en: "Editorial Boudoir / Experimental Photography",
+    },
+    concept: {
+      es: "El cuerpo encuentra su propia arquitectura.",
+      en: "The body finds its own architecture.",
+    },
+    description: {
+      es: "Un estudio en azul frío: piel, cristal y reflejo dentro de la geometría del espacio. La figura se sostiene entre superficies duras y luz fría, y el pudor se vuelve composición. Un ritual íntimo escrito en un solo color.",
+      en: "A study in cold blue — skin, glass and reflection inside the geometry of the room. The figure holds itself between hard surfaces and cool light, and modesty becomes composition. An intimate ritual written in a single colour.",
+    },
+    group: "blue",
+    credits: [PHOTO],
+  },
+  {
     slug: "yoga",
     title: "Yoga and Light",
     year: "2026",

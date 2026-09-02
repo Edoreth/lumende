@@ -30,12 +30,12 @@ export default function ExperimentsPage() {
       <header className="mb-[clamp(3rem,9vh,7rem)] flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
         <div className="max-w-[20ch]">
           <h1 className="label mb-6">
-            <T es="Experimentos · Rituales en Azul" en="Experiments · Rituals in Blue" />
+            <T es="Experimentos · Pintar con Luz" en="Experiments · Painting with Light" />
           </h1>
           <p className="display text-[clamp(2rem,6vw,4.5rem)] text-ink">
             <T
-              es="El cuerpo encuentra su propia arquitectura."
-              en="The body finds its own architecture."
+              es="Una sola exposición, larga: la luz dibuja lo que el cuerpo insinúa."
+              en="A single long exposure: light draws what the body only suggests."
             />
           </p>
         </div>
