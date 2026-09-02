@@ -19,46 +19,27 @@ const PHOTO: Credit = {
 
 export const projects: Project[] = [
   {
-    slug: "nightmare",
-    title: "Nightmare",
+    slug: "reverie-nightmare",
+    title: "Reverie Nightmare",
     year: "2026",
     category: {
       es: "Fotografía Editorial / Experimental",
       en: "Editorial / Experimental Photography",
     },
     concept: {
-      es: "Una exploración visual del sueño, la distorsión y la luz artificial.",
-      en: "A visual exploration of dreams, distortion and artificial light.",
+      es: "El lado oscuro del ensueño.",
+      en: "The dark side of the reverie.",
     },
     description: {
       es: "Un descenso al espacio entre el sueño y la vigilia. Cuerpos difuminados por la larga exposición, rostros iluminados por colores que no existen a la luz del día. Cada cuadro es el fragmento de un sueño que se niega a mantener su forma.",
       en: "A descent into the space between sleep and waking. Bodies smeared by long exposure, faces lit by colour that does not exist in daylight. Each frame is a fragment of a dream refusing to hold its shape.",
     },
-    group: "nightmare",
+    group: "reverie-nightmare",
     credits: [PHOTO],
   },
   {
-    slug: "fera",
-    title: "Fairy's and Aliens",
-    year: "2026",
-    category: {
-      es: "Conceptual / Experimental",
-      en: "Conceptual / Experimental",
-    },
-    concept: {
-      es: "Una humana que se descubre como un hada alienígena.",
-      en: "A human discovering herself as an alien fairy.",
-    },
-    description: {
-      es: "En la frontera entre lo humano y lo extraño, el cuerpo se transforma en criatura. Mitad hada, mitad aparición de otro mundo: mundos proyectados envuelven la piel y el estudio se vuelve el hábitat de algo que apenas empieza a reconocerse.",
-      en: "On the border between the human and the strange, the body turns into a creature. Half fairy, half apparition from another world — projected worlds wrap the skin and the studio becomes the habitat of something only beginning to recognise itself.",
-    },
-    group: "fera",
-    credits: [PHOTO],
-  },
-  {
-    slug: "afterimage",
-    title: "Reverie Luminare",
+    slug: "reverie-dream",
+    title: "Reverie Dream",
     year: "2026",
     category: {
       es: "Larga Exposición / Fotografía Experimental",
@@ -72,26 +53,83 @@ export const projects: Project[] = [
       es: "El movimiento registrado como memoria. Las figuras dejan estelas de sí mismas a lo largo del encuadre, pintadas por la luz y el tiempo más que capturadas por ellos. El sujeto y su fantasma comparten el mismo instante.",
       en: "Movement recorded as memory. Figures leave trails of themselves across the frame, painted by light and time rather than captured by it. The subject and its ghost share the same instant.",
     },
-    group: "afterimage",
+    group: "reverie-dream",
     credits: [PHOTO],
   },
   {
-    slug: "nocturne",
-    title: "Japan",
+    slug: "reverie-oniric",
+    title: "Reverie Oneiric",
     year: "2026",
     category: {
-      es: "Fotografía / Movimiento",
-      en: "Photography / Motion",
+      es: "Conceptual / Fotografía Experimental",
+      en: "Conceptual / Experimental Photography",
     },
     concept: {
-      es: "Invierno japonés.",
-      en: "Japanese winter.",
+      es: "La lógica del sueño hecha imagen.",
+      en: "The logic of dreams turned into image.",
     },
     description: {
-      es: "Un estudio silencioso de la luz azul, la distancia y el frío. Nieve, silueta y el silencio entre cuadros: el invierno japonés desacelera la mirada hasta que la imagen es menos una fotografía que un aliento contenido.",
-      en: "A quiet study of blue light, distance and cold. Snow, silhouette and the hush between frames — the Japanese winter slows the eye until the image is less a photograph than a held breath.",
+      es: "El tercer movimiento del ensueño: ni pesadilla ni descanso, sino ese territorio flotante donde las reglas se disuelven. La luz se curva, el cuerpo se desdobla y la escena obedece a una gramática que solo tiene sentido mientras dormimos.",
+      en: "The third movement of the reverie — neither nightmare nor rest, but that floating territory where the rules dissolve. Light bends, the body doubles, and the scene obeys a grammar that only makes sense while we sleep.",
     },
-    group: "nocturne",
+    group: "reverie-oniric",
+    credits: [PHOTO],
+  },
+  {
+    slug: "witch",
+    title: "She Is a Witch",
+    year: "2026",
+    category: {
+      es: "Retrato Conceptual / Experimental",
+      en: "Conceptual Portrait / Experimental",
+    },
+    concept: {
+      es: "Ritual, humo y poder femenino.",
+      en: "Ritual, smoke and feminine power.",
+    },
+    description: {
+      es: "Un retrato de lo indomable. Entre humo, sombra y gesto, la figura invoca una fuerza antigua: no la bruja del cuento, sino la mujer que conoce su propio poder. La luz la busca y ella decide cuánto dejarse ver.",
+      en: "A portrait of the untamed. Amid smoke, shadow and gesture, the figure summons something ancient — not the witch of fairy tales, but a woman who knows her own power. Light seeks her out, and she decides how much to reveal.",
+    },
+    group: "witch",
+    credits: [PHOTO],
+  },
+  {
+    slug: "fantasma",
+    title: "Fantasma",
+    year: "2026",
+    category: {
+      es: "Retrato Pictórico / Editorial",
+      en: "Painterly Portrait / Editorial",
+    },
+    concept: {
+      es: "Un retrato que respira como una pintura.",
+      en: "A portrait that breathes like a painting.",
+    },
+    description: {
+      es: "Luz cálida de vela, terracota y girasoles: un retrato construido como pintura clásica. La figura habita la penumbra como una presencia que apenas se detiene — mitad recuerdo, mitad aparición — y deja en el aire la sensación de algo que ya no está.",
+      en: "Warm candlelight, terracotta and sunflowers — a portrait built like a classical painting. The figure inhabits the half-light as a presence barely pausing: half memory, half apparition, leaving behind the feeling of something no longer there.",
+    },
+    group: "fantasma",
+    credits: [PHOTO],
+  },
+  {
+    slug: "vestida-de-luz",
+    title: "Vestida de Luz",
+    year: "2026",
+    category: {
+      es: "Desnudo Artístico / Light Painting",
+      en: "Fine-Art Nude / Light Painting",
+    },
+    concept: {
+      es: "La luz como única prenda.",
+      en: "Light as the only garment.",
+    },
+    description: {
+      es: "Trazos de luz dibujados a mano envuelven la piel como una prenda que solo existe durante la exposición. Un estudio íntimo y escultórico del cuerpo, donde la desnudez se vela y se revela con luz: no lo que se muestra, sino lo que la luz decide tocar.",
+      en: "Hand-drawn trails of light wrap the skin like a garment that exists only for the length of the exposure. An intimate, sculptural study of the body, where nakedness is veiled and revealed by light — not what is shown, but what the light chooses to touch.",
+    },
+    group: "vestida",
     credits: [PHOTO],
   },
   {

@@ -6,7 +6,7 @@ import { group } from "@/lib/media";
 import { site } from "@/data/site";
 import { T } from "@/i18n/T";
 
-const heroItem = group("hero")[0] ?? group("nightmare")[0];
+const heroItem = group("hero")[0] ?? group("reverie-nightmare")[0];
 
 const entries: WorkEntry[] = projects.map((p) => ({
   slug: p.slug,

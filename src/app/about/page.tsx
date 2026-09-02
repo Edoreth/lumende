@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 };
 
 const portrait =
-  group("afterimage").find((i) => i.id === "afterimage-01") ??
-  group("nightmare")[0];
+  group("vestida").find((i) => i.id === "vestida-02") ??
+  group("reverie-nightmare")[0];
 
 export default function AboutPage() {
   return (
