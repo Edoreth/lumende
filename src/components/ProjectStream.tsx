@@ -78,12 +78,12 @@ export default function ProjectStream({
   const blocks = buildStream(items, offset, concept);
 
   return (
-    <div className="flex flex-col gap-[clamp(4rem,12vh,10rem)]">
+    <div className="flex flex-col gap-[clamp(2.25rem,6vh,5rem)]">
       {blocks.map((b, idx) => {
         switch (b.kind) {
           case "full":
             return (
-              <div key={idx} className="relative h-[92vh] w-full">
+              <div key={idx} className="relative h-[86vh] w-full">
                 <Media
                   item={b.a}
                   alt={`${title} — plate ${idx + 1}`}
@@ -143,7 +143,7 @@ export default function ProjectStream({
                   alt={`${title} — plate ${idx + 1}b`}
                   sizes="(max-width:640px) 100vw, 45vw"
                   reveal="mask"
-                  className="self-end sm:mt-[clamp(2rem,10vh,7rem)]"
+                  className="self-end sm:mt-[clamp(1rem,5vh,3.5rem)]"
                 />
               </div>
             );
@@ -166,6 +166,7 @@ export default function ProjectStream({
             return (
               <div key={idx} className="px-[var(--pad)] py-[clamp(2rem,8vh,6rem)]">
                 <p
+                  suppressHydrationWarning
                   className="display mx-auto max-w-[16ch] text-center text-[clamp(1.75rem,4.5vw,3.5rem)] text-ink"
                   data-reveal="rise"
                 >

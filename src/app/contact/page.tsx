@@ -51,6 +51,19 @@ export default function ContactPage() {
             </a>
             <p className="label mt-2">{site.location}</p>
           </div>
+          <a
+            href={site.agenda}
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex w-fit items-center gap-3 border-b border-line pb-1 text-ink transition-colors hover:border-ink"
+          >
+            <span className="label !text-ink">
+              <T es="Agendar una sesión" en="Book a session" />
+            </span>
+            <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </a>
         </div>
 
         {/* Right — form */}

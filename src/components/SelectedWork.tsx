@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
 import type { MediaItem } from "@/lib/media";
 import type { Loc } from "@/data/site";
 import { T } from "@/i18n/T";
@@ -17,84 +16,21 @@ export type WorkEntry = {
 };
 
 export default function SelectedWork({ entries }: { entries: WorkEntry[] }) {
-  const [active, setActive] = useState<number | null>(null);
-  const pos = useRef({ x: 0, y: 0 });
-  const previewRef = useRef<HTMLDivElement>(null);
-  const raf = useRef(0);
-  const canHover = useRef(false);
-
-  useEffect(() => {
-    canHover.current = window.matchMedia("(hover: hover)").matches;
-  }, []);
-
-  const onMove = useCallback((e: React.PointerEvent) => {
-    pos.current = { x: e.clientX, y: e.clientY };
-    if (raf.current) return;
-    raf.current = requestAnimationFrame(() => {
-      raf.current = 0;
-      const el = previewRef.current;
-      if (!el) return;
-      // Ease toward cursor, offset up-left so the name stays readable.
-      el.style.transform = `translate3d(${pos.current.x - el.offsetWidth / 2}px, ${
-        pos.current.y - el.offsetHeight / 2
-      }px, 0)`;
-    });
-  }, []);
-
   return (
-    <section
-      className="relative"
-      onPointerMove={canHover.current ? onMove : undefined}
-    >
-      {/* Floating preview — desktop only */}
-      <div
-        ref={previewRef}
-        aria-hidden
-        className="pointer-events-none fixed left-0 top-0 z-20 hidden w-[clamp(240px,26vw,400px)] will-change-transform md:block"
-      >
-        {active !== null && (
-          <div
-            key={entries[active].slug}
-            style={{ aspectRatio: entries[active].preview.ratio }}
-            className="preview-in relative overflow-hidden"
-          >
-            <img
-              src={entries[active].preview.src}
-              srcSet={entries[active].preview.srcset}
-              sizes="26vw"
-              alt=""
-              className="h-full w-full object-cover"
-              draggable={false}
-            />
-          </div>
-        )}
-      </div>
-
-      {/* Desktop: name index */}
+    <section className="relative">
+      {/* Desktop: quiet editorial name index — no floating preview, no flicker */}
       <ul className="hidden md:block">
-        {entries.map((e, i) => (
+        {entries.map((e) => (
           <li key={e.slug} className="border-t border-line last:border-b">
             <Link
               href={`/work/${e.slug}`}
-              className="group grid grid-cols-[1fr_auto] items-baseline gap-8 py-[clamp(1.5rem,4vw,3rem)] transition-colors"
-              onMouseEnter={() => setActive(i)}
-              onMouseLeave={() => setActive(null)}
-              onFocus={() => setActive(i)}
-              onBlur={() => setActive(null)}
+              className="group grid grid-cols-[1fr_auto] items-baseline gap-8 py-[clamp(1.5rem,4vw,3rem)]"
             >
               <span className="flex items-baseline gap-6">
-                <span
-                  className="display text-[clamp(2.5rem,8vw,7rem)] text-ink transition-[opacity,letter-spacing] duration-500"
-                  style={{
-                    opacity: active === null || active === i ? 1 : 0.28,
-                  }}
-                >
+                <span className="display text-[clamp(2.5rem,8vw,7rem)] text-ink transition-opacity duration-300 group-hover:opacity-70">
                   {e.title}
                 </span>
-                <span
-                  className="label hidden translate-y-[-0.3em] transition-opacity duration-500 lg:inline"
-                  style={{ opacity: active === i ? 1 : 0 }}
-                >
+                <span className="label hidden translate-y-[-0.3em] opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg:inline">
                   <T es={e.concept.es} en={e.concept.en} />
                 </span>
               </span>
@@ -109,7 +45,7 @@ export default function SelectedWork({ entries }: { entries: WorkEntry[] }) {
         ))}
       </ul>
 
-      {/* Mobile: image-led stack, hover replaced by scroll reveal */}
+      {/* Mobile: image-led stack, revealed on scroll */}
       <div className="flex flex-col gap-16 md:hidden">
         {entries.map((e) => (
           <Link key={e.slug} href={`/work/${e.slug}`} className="block">

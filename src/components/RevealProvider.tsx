@@ -29,11 +29,14 @@ export default function RevealProvider() {
       return;
     }
 
+    // Reveal well before an element scrolls into view, so a fast scroll never
+    // lands on an un-revealed (blank) frame.
     const revealInView = () => {
       const h = window.innerHeight;
       for (const el of remaining()) {
         const r = el.getBoundingClientRect();
-        if (r.top < h * 0.95 && r.bottom > 0) el.setAttribute("data-in", "");
+        if (r.top < h * 1.35 && r.bottom > -h * 0.35)
+          el.setAttribute("data-in", "");
       }
     };
 
@@ -49,7 +52,7 @@ export default function RevealProvider() {
           }
         }
       },
-      { rootMargin: "0px 0px -6% 0px", threshold: 0.05 }
+      { rootMargin: "0px 0px 35% 0px", threshold: 0 }
     );
     remaining().forEach((el) => io.observe(el));
 

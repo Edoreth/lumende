@@ -13,9 +13,9 @@ export default function SmoothScroll() {
       return;
     }
     const lenis = new Lenis({
-      duration: 1.15,
+      duration: 0.85,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      wheelMultiplier: 0.9,
+      wheelMultiplier: 1,
     });
     let raf = 0;
     const loop = (time: number) => {

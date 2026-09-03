@@ -11,6 +11,7 @@ export const site = {
   },
   domain: "lumende.studio",
   url: "https://lumende.studio",
+  agenda: "https://claude.ai/code/artifact/7280c26d-e663-48a0-8fbb-3f9d5166b07e",
 };
 
 export const nav: { label: Loc; href: string }[] = [
