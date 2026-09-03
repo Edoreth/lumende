@@ -83,6 +83,12 @@ export default async function ProjectPage({
             </dt>
             <dd className="font-serif text-lg text-ink">{p.year}</dd>
           </div>
+          <div className="flex items-baseline justify-between border-b border-line pb-3">
+            <dt className="label">
+              <T es="Ciudad" en="City" />
+            </dt>
+            <dd className="font-serif text-lg text-ink">Querétaro, México</dd>
+          </div>
           {p.credits.map((c) => (
             <div
               key={c.role.en}
@@ -94,6 +100,12 @@ export default async function ProjectPage({
               <dd className="font-serif text-lg text-ink">{c.name}</dd>
             </div>
           ))}
+          <Link
+            href="/contact"
+            className="label mt-2 inline-block border-b border-line pb-1 transition-colors hover:!text-ink hover:border-ink"
+          >
+            <T es="Solicitar una sesión similar →" en="Request a similar session →" />
+          </Link>
         </dl>
       </section>
 

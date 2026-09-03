@@ -47,6 +47,12 @@ export default function Home() {
           <p className="label mt-4 !text-white/90 !tracking-[0.34em]">
             <T es={site.tagline.es} en={site.tagline.en} />
           </p>
+          <p className="mt-4 max-w-[42ch] text-center text-[0.82rem] leading-relaxed text-white/70">
+            <T
+              es="Fotografía editorial, retrato creativo y light painting en Querétaro."
+              en="Editorial photography, creative portraiture and light painting in Querétaro."
+            />
+          </p>
         </div>
         <div className="absolute inset-x-0 bottom-8 flex justify-center">
           <span className="label !text-white/70 animate-pulse">
@@ -59,8 +65,8 @@ export default function Home() {
       <section className="px-[var(--pad)] pt-[clamp(3.5rem,10vh,7rem)]">
         <p className="display max-w-[26ch] text-[clamp(1.5rem,3.5vw,2.75rem)] text-ink">
           <T
-            es="Fotografía editorial, retrato creativo y light painting para artistas, moda y marcas en Querétaro."
-            en="Editorial photography, creative portraiture and light painting for artists, fashion and brands in Querétaro."
+            es="Trabajo con artistas, músicos, moda y marcas para construir imágenes con concepto, luz y dirección."
+            en="I work with artists, musicians, fashion and brands to build images with concept, light and direction."
           />
         </p>
         <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
