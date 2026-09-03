@@ -16,6 +16,16 @@ const portrait =
   group("vestida").find((i) => i.id === "vestida-02") ??
   group("reverie-nightmare")[0];
 
+// A short cross-section of the work, so the studio page isn't a single image.
+const gallery = [
+  group("reverie-nightmare")[6],
+  group("blue")[2],
+  group("vestida")[7],
+  group("experiments")[4],
+  group("fantasma")[3],
+  group("yoga")[5],
+].filter(Boolean);
+
 export default function AboutPage() {
   return (
     <section className="px-[var(--pad)] pb-[clamp(4rem,10vh,8rem)] pt-[clamp(7rem,18vh,12rem)]">
@@ -82,6 +92,19 @@ export default function AboutPage() {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* A cross-section of the work */}
+      <div className="mt-[clamp(4rem,12vh,9rem)] grid grid-cols-2 gap-[clamp(0.75rem,2vw,1.75rem)] md:grid-cols-3">
+        {gallery.map((item, i) => (
+          <Media
+            key={item.id}
+            item={item}
+            alt={`LUMENDE — ${i + 1}`}
+            sizes="(max-width:768px) 50vw, 33vw"
+            reveal="mask"
+          />
+        ))}
       </div>
     </section>
   );

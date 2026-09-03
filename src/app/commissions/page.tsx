@@ -25,12 +25,12 @@ const fields: { es: string; en: string }[] = [
 
 export default function CommissionsPage() {
   return (
-    <section className="pb-[clamp(3rem,8vh,6rem)] pt-[clamp(7rem,18vh,12rem)]">
-      <header className="px-[var(--pad)] mb-[clamp(3rem,9vh,7rem)]">
-        <h1 className="label mb-8">
+    <section className="pb-[clamp(3rem,8vh,6rem)] pt-[clamp(5.5rem,11vh,7.5rem)]">
+      <header className="px-[var(--pad)] mb-[clamp(1.75rem,4vh,3rem)]">
+        <h1 className="label mb-5">
           <T es="Encargos" en="Commissions" />
         </h1>
-        <p className="display max-w-[16ch] text-[clamp(2.25rem,7vw,5.5rem)] text-ink">
+        <p className="display max-w-[20ch] text-[clamp(2rem,5vw,3.5rem)] text-ink">
           <T
             es="Disponible para encargos, colaboraciones y proyectos creativos seleccionados."
             en="Available for selected commissions, collaborations and creative projects."

@@ -26,13 +26,13 @@ const tags: { es: string; en: string }[] = [
 
 export default function ExperimentsPage() {
   return (
-    <section className="px-[var(--pad)] pb-[clamp(4rem,10vh,8rem)] pt-[clamp(7rem,18vh,12rem)]">
-      <header className="mb-[clamp(3rem,9vh,7rem)] flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-        <div className="max-w-[20ch]">
-          <h1 className="label mb-6">
+    <section className="px-[var(--pad)] pb-[clamp(4rem,10vh,8rem)] pt-[clamp(5.5rem,11vh,7.5rem)]">
+      <header className="mb-[clamp(1.75rem,4vh,3rem)] flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="max-w-[24ch]">
+          <h1 className="label mb-4">
             <T es="Experimentos · Pintar con Luz" en="Experiments · Painting with Light" />
           </h1>
-          <p className="display text-[clamp(2rem,6vw,4.5rem)] text-ink">
+          <p className="display text-[clamp(1.75rem,4vw,3rem)] text-ink">
             <T
               es="Una sola exposición, larga: la luz dibuja lo que el cuerpo insinúa."
               en="A single long exposure: light draws what the body only suggests."
