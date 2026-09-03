@@ -59,14 +59,12 @@ export default function Nav() {
               </Link>
             );
           })}
-          <a
-            href={site.agenda}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href="/contact"
             className="font-sans text-[0.68rem] font-medium uppercase tracking-[0.22em] text-white opacity-80 transition-opacity hover:opacity-100"
           >
             <T es="Agenda" en="Agenda" />
-          </a>
+          </Link>
           <span className="ml-2 h-3 w-px bg-white/25" aria-hidden />
           <LangToggle />
         </nav>
@@ -106,10 +104,8 @@ export default function Nav() {
               <T es={item.label.es} en={item.label.en} />
             </Link>
           ))}
-          <a
-            href={site.agenda}
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            href="/contact"
             className="display text-ink text-[clamp(2.25rem,11vw,4rem)] transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
             style={{
               transitionDelay: open ? `${100 + nav.length * 60}ms` : "0ms",
@@ -119,7 +115,7 @@ export default function Nav() {
             tabIndex={open ? 0 : -1}
           >
             <T es="Agenda" en="Agenda" />
-          </a>
+          </Link>
         </nav>
         <div className="mt-16 flex flex-col gap-3">
           <LangToggle className="!text-ink [&_button]:!text-ink" />

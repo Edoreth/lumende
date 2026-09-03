@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { site } from "@/data/site";
+import { landings } from "@/data/landings";
 import { T } from "@/i18n/T";
 
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-line px-[var(--pad)] py-[clamp(3rem,7vw,6rem)]">
-      <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
+      <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
         <div>
           <Link
             href="/"
@@ -18,6 +19,20 @@ export default function Footer() {
             <T es={site.tagline.es} en={site.tagline.en} />
           </p>
         </div>
+        <nav className="flex flex-col gap-2" aria-label="Servicios">
+          <span className="label !text-ink-faint">
+            <T es="Servicios" en="Services" />
+          </span>
+          {landings.map((l) => (
+            <Link
+              key={l.slug}
+              href={`/${l.slug}`}
+              className="label transition-colors hover:text-ink"
+            >
+              <T es={l.title.es} en={l.title.en} />
+            </Link>
+          ))}
+        </nav>
         <div className="flex flex-col gap-2 md:items-end">
           <span className="label">{site.location}</span>
           <a

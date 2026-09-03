@@ -87,7 +87,7 @@ export default function ProjectStream({
               <div key={idx} className="w-full">
                 <Media
                   item={b.a}
-                  alt={`${title} — plate ${idx + 1}`}
+                  alt={`${title} — fotografía editorial en Querétaro por LUMENDE`}
                   sizes="100vw"
                   reveal="scale"
                   priority={idx === 0}
@@ -99,7 +99,7 @@ export default function ProjectStream({
               <div key={idx} className="px-[var(--pad)]">
                 <Media
                   item={b.a}
-                  alt={`${title} — plate ${idx + 1}`}
+                  alt={`${title} — fotografía editorial en Querétaro por LUMENDE`}
                   sizes="90vw"
                   reveal="mask"
                 />
@@ -117,7 +117,7 @@ export default function ProjectStream({
                 <div className={`w-full md:w-[min(52vw,620px)] ${align}`}>
                   <Media
                     item={b.a}
-                    alt={`${title} — plate ${idx + 1}`}
+                    alt={`${title} — fotografía editorial en Querétaro por LUMENDE`}
                     sizes="(max-width:768px) 100vw, 52vw"
                     reveal="mask"
                   />
@@ -133,14 +133,14 @@ export default function ProjectStream({
               >
                 <Media
                   item={b.a}
-                  alt={`${title} — plate ${idx + 1}a`}
+                  alt={`${title} — fotografía editorial en Querétaro por LUMENDE`}
                   sizes="(max-width:640px) 100vw, 45vw"
                   reveal="mask"
                   className="self-start"
                 />
                 <Media
                   item={b.b}
-                  alt={`${title} — plate ${idx + 1}b`}
+                  alt={`${title} — fotografía editorial en Querétaro por LUMENDE`}
                   sizes="(max-width:640px) 100vw, 45vw"
                   reveal="mask"
                   className="self-end sm:mt-[clamp(1rem,5vh,3.5rem)]"
@@ -154,7 +154,7 @@ export default function ProjectStream({
                 <div className={`w-full md:w-[min(38vw,440px)] ${align}`}>
                   <Media
                     item={b.a}
-                    alt={`${title} — detail`}
+                    alt={`${title} — detalle, fotografía editorial en Querétaro por LUMENDE`}
                     sizes="(max-width:768px) 100vw, 38vw"
                     reveal="mask"
                   />

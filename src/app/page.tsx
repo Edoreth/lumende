@@ -55,6 +55,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* STUDIO STATEMENT + CTA */}
+      <section className="px-[var(--pad)] pt-[clamp(3.5rem,10vh,7rem)]">
+        <p className="display max-w-[26ch] text-[clamp(1.5rem,3.5vw,2.75rem)] text-ink">
+          <T
+            es="Fotografía editorial, retrato creativo y light painting para artistas, moda y marcas en Querétaro."
+            en="Editorial photography, creative portraiture and light painting for artists, fashion and brands in Querétaro."
+          />
+        </p>
+        <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
+          <Link
+            href="/work"
+            className="label border-b border-line pb-1 transition-colors hover:!text-ink hover:border-ink"
+          >
+            <T es="Ver proyectos →" en="View projects →" />
+          </Link>
+          <Link
+            href="/contact"
+            className="label border-b border-line pb-1 transition-colors hover:!text-ink hover:border-ink"
+          >
+            <T es="Cotizar una sesión →" en="Get a quote →" />
+          </Link>
+        </div>
+      </section>
+
       {/* SELECTED WORK */}
       <section className="px-[var(--pad)] py-[clamp(4rem,12vh,9rem)]">
         <div className="mb-[clamp(2rem,6vh,5rem)] flex items-baseline justify-between">

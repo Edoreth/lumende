@@ -6,9 +6,9 @@ import { services } from "@/data/site";
 import { T } from "@/i18n/T";
 
 export const metadata: Metadata = {
-  title: "Encargos",
+  title: "Fotografía editorial y retratos creativos en Querétaro",
   description:
-    "Fotografía por encargo de LUMENDE para moda, artistas, músicos, retratos, editorial y campañas creativas.",
+    "Encargos de fotografía en Querétaro: editorial, retrato creativo, moda, artistas, músicos y campañas. Cotiza una sesión con LUMENDE.",
   alternates: { canonical: "/commissions" },
 };
 
@@ -56,7 +56,7 @@ export default function CommissionsPage() {
           >
             <Media
               item={item}
-              alt={`LUMENDE — encargo ${i + 1}`}
+              alt={`Encargo de fotografía editorial y retrato creativo en Querétaro — LUMENDE ${i + 1}`}
               sizes="(max-width:768px) 100vw, 48vw"
               reveal="mask"
             />

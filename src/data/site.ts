@@ -10,7 +10,7 @@ export const site = {
     url: "https://instagram.com/lumende.studio",
   },
   domain: "lumende.studio",
-  url: "https://lumende.studio",
+  url: "https://www.lumende.studio",
   agenda: "https://claude.ai/code/artifact/7280c26d-e663-48a0-8fbb-3f9d5166b07e",
 };
 

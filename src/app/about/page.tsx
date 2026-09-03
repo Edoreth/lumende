@@ -100,7 +100,7 @@ export default function AboutPage() {
           <Media
             key={item.id}
             item={item}
-            alt={`LUMENDE — ${i + 1}`}
+            alt={`Fotografía editorial y retrato creativo en Querétaro — LUMENDE ${i + 1}`}
             sizes="(max-width:768px) 50vw, 33vw"
             reveal="mask"
           />

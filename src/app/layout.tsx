@@ -29,7 +29,7 @@ const descriptionEs =
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "LUMENDE — Fotografía / Luz / Movimiento",
+    default: "Fotógrafo editorial y creativo en Querétaro — LUMENDE",
     template: "%s — LUMENDE",
   },
   description: descriptionEs,
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "LUMENDE",
-    title: "LUMENDE — Fotografía / Luz / Movimiento",
+    title: "Fotógrafo editorial y creativo en Querétaro — LUMENDE",
     description: descriptionEs,
     url: site.url,
     locale: "es_MX",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LUMENDE — Fotografía / Luz / Movimiento",
+    title: "Fotógrafo editorial y creativo en Querétaro — LUMENDE",
     description: descriptionEs,
   },
   alternates: { canonical: "/" },

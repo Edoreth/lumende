@@ -4,9 +4,9 @@ import { group } from "@/lib/media";
 import { T } from "@/i18n/T";
 
 export const metadata: Metadata = {
-  title: "Experimentos",
+  title: "Light painting y fotografía experimental en Querétaro",
   description:
-    "Exploraciones visuales personales de LUMENDE — light painting, larga exposición, motion blur, proyección, reflejos y accidente.",
+    "Light painting, larga exposición, motion blur y proyección — fotografía experimental de LUMENDE en Querétaro.",
   alternates: { canonical: "/experiments" },
 };
 
@@ -54,7 +54,7 @@ export default function ExperimentsPage() {
           <div key={item.id} className="mb-[clamp(1rem,2.5vw,2.5rem)] break-inside-avoid">
             <Media
               item={item}
-              alt={`Experiment ${i + 1}`}
+              alt={`Light painting y larga exposición — fotografía experimental en Querétaro por LUMENDE ${i + 1}`}
               sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
               reveal="fade"
             />
