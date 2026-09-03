@@ -114,6 +114,28 @@ export const projects: Project[] = [
     credits: [PHOTO],
   },
   {
+    slug: "vilmora-studio",
+    title: "Vilmora Studio",
+    year: "2026",
+    category: {
+      es: "Editorial de Moda / Colaboración",
+      en: "Fashion Editorial / Collaboration",
+    },
+    concept: {
+      es: "Oro, cadenas y devoción.",
+      en: "Gold, chains and devotion.",
+    },
+    description: {
+      es: "Una colaboración con Vilmora Studio. Iconografía sacra reinterpretada: velos de brocado dorado, pecheras de oro y cadenas que atan a dos figuras entre lo santo y lo profano. Lágrimas doradas, terciopelo negro y luz de templo — un retablo vivo.",
+      en: "A collaboration with Vilmora Studio. Sacred iconography reimagined: gold-brocade veils, gilded breastplates and chains binding two figures between the holy and the profane. Golden tears, black velvet and temple light — a living altarpiece.",
+    },
+    group: "vilmora",
+    credits: [
+      PHOTO,
+      { role: { es: "Vestuario", en: "Wardrobe" }, name: "Vilmora Studio" },
+    ],
+  },
+  {
     slug: "vestida-de-luz",
     title: "Vestida de Luz",
     year: "2026",

@@ -4009,6 +4009,320 @@
       ]
     }
   ],
+  "vilmora": [
+    {
+      "id": "vilmora-01",
+      "orientation": "portrait",
+      "w": 1014,
+      "h": 1600,
+      "ratio": 0.6338,
+      "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABwBgCdASoYACYAPtFOoU2oJCMiOrzIAQAaCUAWo2fAfkXIF/9lzOFJ8E+eeRiaU/4kQBmUlgL2FuhZ/IAA/vDfralakxJ3pqIbMm0P7mS6h6OLFjEWr9HiyG2omkhx1Z+aKtCSPtFAcfOufPPWJIkbHqWxoCCCCj6jUDFMbBXcdiMPbjf7shyDV5jH92OoKEha4yHXEtm+9AAAAAA=",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-01-400.webp 400w, /media/vilmora/vilmora-01-800.webp 800w",
+      "src": "/media/vilmora/vilmora-01-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-01-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-01-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-02",
+      "orientation": "portrait",
+      "w": 1021,
+      "h": 1600,
+      "ratio": 0.6381,
+      "lqip": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACwBQCdASoYACYAPslQnk2npKKiOqgA8BkJQBbChw73mljf1zmcy7W3eUZzP5dKU1/hTqXSZAAA/vDUVNiqwT1gNctyBu6IwyUvTusQwmZ0jjAXVEbVQ3Xw2SG1cUPN5pyYlSjRgSQSPKDiiZ6CR7PNNAS1i/8ftWALBZ/BxBd5sTRWWhb8GEXSqa2S4XnWca4+UAAA",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-02-400.webp 400w, /media/vilmora/vilmora-02-800.webp 800w",
+      "src": "/media/vilmora/vilmora-02-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-02-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-02-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-03",
+      "orientation": "portrait",
+      "w": 1066,
+      "h": 1600,
+      "ratio": 0.6663,
+      "lqip": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABwBgCdASoYACQAPtlWo02oJKMiOrmYAQAbCUAQFsEVyyNKXwqjmZBHBBAKVg1z7W1tGRf4F4bLQwJ6/oAA/u53Mmy9DmJtOckereXX2TMlDTz1LCUWu+sgRD89UKVqmRDoJezcRIKhwEt7PL8xppKnsV3R+ndlexT46Zj0tIErDE/lBirBMchoi6gAAA==",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-03-400.webp 400w, /media/vilmora/vilmora-03-800.webp 800w",
+      "src": "/media/vilmora/vilmora-03-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-03-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-03-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-04",
+      "orientation": "portrait",
+      "w": 1066,
+      "h": 1600,
+      "ratio": 0.6663,
+      "lqip": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABQBgCdASoYACQAPu1gqE6ppSOiNVQIATAdiWUAxnw5WE05td4mX6/ljXvnb4bTjJX589dJVlCsiR2vAAD+83hZID1axHY9LDSaTBnQneLAqc4kORxT97+e2HQFB6NkR2mrF+jfe4j6itI78I0sPCDhkeng2bzS9cNBQiwzUi2hHGqIlfUcXGr/992Ia8eigAA=",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-04-400.webp 400w, /media/vilmora/vilmora-04-800.webp 800w",
+      "src": "/media/vilmora/vilmora-04-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-04-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-04-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-05",
+      "orientation": "portrait",
+      "w": 1018,
+      "h": 1600,
+      "ratio": 0.6362,
+      "lqip": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABwBgCdASoYACYAPtVWok2oJKMiOrmYAQAaiUAWIauQVqgTUagbGGEjvAWh52swkq2tVww7U4npq70MN/AA/u6hUaKJO4eULtfWOiuS2TWVsVhcomsIPuHj9p+RSQUGroqIesPW8qXOP2Cyja1dy6PQYM1vJ27RkdCnv5AeUlxTSsNYfrW0+bE74GR1KRjTocT64l4+gEDSI3onuAu9JoIAAAA=",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-05-400.webp 400w, /media/vilmora/vilmora-05-800.webp 800w",
+      "src": "/media/vilmora/vilmora-05-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-05-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-05-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-06",
+      "orientation": "portrait",
+      "w": 1066,
+      "h": 1600,
+      "ratio": 0.6663,
+      "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAADQBQCdASoYACQAPu1mqk4ppaQiKqwBMB2JQBUk98gy2oVPQ6VSiYQIcbDqd+ytGstoLEAAnTMAAP7ccMirzXYurVIl41V0IF/pXcSTwsHOuDMu81N20MFshMBMCNUJ1ylIAETgf0IvcnhdURAuxtWV/QSivaJTJ6WtlKO9LYbzfJVIykbBWMdUjJy6HtC85daEAJyfa5Olyg4A7/aPMmNUx9zSH8wgy+DAAA==",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-06-400.webp 400w, /media/vilmora/vilmora-06-800.webp 800w",
+      "src": "/media/vilmora/vilmora-06-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-06-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-06-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-07",
+      "orientation": "portrait",
+      "w": 1066,
+      "h": 1600,
+      "ratio": 0.6663,
+      "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAAAQBgCdASoYACQAPu1kq1AppSOiqrgMATAdiUAXYAFpvPh5K5PsN6GcXbt9ueJ9eW9QGYuZLD3WRwAAzh5uIHr4WycIZimj351zIkAFOUlg1I/JJufT5B26MYlmpkDxA5e62bkRgctgLkT8jnMAXTj8y6so++9GG5V8/uxEpDHGBkgXa7jV85LVO3e8r5UriXXYuQBrAARG4guZo1mvtXImwUQ0sPkuCQ4ZlgRDfgAAAA==",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-07-400.webp 400w, /media/vilmora/vilmora-07-800.webp 800w",
+      "src": "/media/vilmora/vilmora-07-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-07-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-07-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-08",
+      "orientation": "portrait",
+      "w": 1066,
+      "h": 1600,
+      "ratio": 0.6663,
+      "lqip": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAQBgCdASoYACQAPu1kq0+ppSOiMBVaqTAdiUAQUUEx+3oYUgDzrFyp2lrd4BwHGq8EA1cwVqXDIAAAyq8v3Kc1hZA7KEcWyl+XOvzear8Jjs6t6SuOE7nOChYKBOUH1+1otMO1eaFbSLvhVvYIP/GreYCmJG5qIJCcfKITHEYN/cT++QmYfqUSrWOM8DIpHPFILze37rj6PW7iaFHZA+IQAAA=",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-08-400.webp 400w, /media/vilmora/vilmora-08-800.webp 800w",
+      "src": "/media/vilmora/vilmora-08-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-08-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-08-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-09",
+      "orientation": "portrait",
+      "w": 1066,
+      "h": 1600,
+      "ratio": 0.6663,
+      "lqip": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAAAwBgCdASoYACQAPuVip02pJaOiMBqtUSAciUAVhmmIMfZlM7hte4XyAUdbaLidNlKlLNhpnG5wWGggAP7kypuhglpJp9OHrqoVap19sYG+i9e8Z9d4PirkSIl1XC6hnUjjI/49MqGZ6bPMITjzs1M3mkkLmu9b7fq0VH0qa6VajcEHAw9SvOIx6RCeioDAgRnIyqNzXwHwu5mIkO/gfk/tGwQlvgAA",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-09-400.webp 400w, /media/vilmora/vilmora-09-800.webp 800w",
+      "src": "/media/vilmora/vilmora-09-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-09-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-09-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-10",
+      "orientation": "portrait",
+      "w": 1066,
+      "h": 1600,
+      "ratio": 0.6663,
+      "lqip": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBgCdASoYACQAPtFaoE2oJaMiOrmYAQAaCWMAygAh4AQ81vv+8ltPTWzTydsOGCZ8pxvs8gv7iFnQAP7wyzzznzy/a7MKaMnRbpzQjUl0kprHTqNE2M7R6CCuSg2INuj4YoMQhcKR/lVtqu0B27qLa6TIdO+hB/E4oA2AiKDTctNB3UIaAAAA",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-10-400.webp 400w, /media/vilmora/vilmora-10-800.webp 800w",
+      "src": "/media/vilmora/vilmora-10-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-10-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-10-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-11",
+      "orientation": "portrait",
+      "w": 1066,
+      "h": 1600,
+      "ratio": 0.6663,
+      "lqip": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAAAwBgCdASoYACQAPu1ur1IppiQipWsxMB2JYwDE2At2TIgjGF7x5rMIlbr5fVtmwrB9JCwgz0UdAVIAAP5qbMYxDix7MgIAqbfMP1SR4KbH/4UyYIlxAoiUCN2BrwHt42MMvT6lNiMbaNGTwzOnbHGIMuTFXF9M/wIV+XHv/dxYRrW5gJ+ng1mSDp2UQXy6IL80IwTUZPAdW0PSHttHQ7r7LGRc2G6YwJHJK627UGToHGA3jrSi4qp8AAA=",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-11-400.webp 400w, /media/vilmora/vilmora-11-800.webp 800w",
+      "src": "/media/vilmora/vilmora-11-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-11-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-11-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-12",
+      "orientation": "portrait",
+      "w": 1066,
+      "h": 1600,
+      "ratio": 0.6663,
+      "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAACQBgCdASoYACQAPu1kqU6ppaOiMBqoATAdiUAUlRAAJuv2zhzTeQIY6DCyD+58lsorVWeUNmRcP+odXGAAAP7itd2pSorpXZsd86Odmqy5kiuxgIqUN8t4kOkRgPKSXZH7ZiqgN6CNTmrjN6jlZiQWubuTPa2Oq/wrr0qAN1fYVUvlXEr0ljTtR2Wv0BfHu09ZesVUXHfagcH4NP362+w4gKOaCc/+310AAA==",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-12-400.webp 400w, /media/vilmora/vilmora-12-800.webp 800w",
+      "src": "/media/vilmora/vilmora-12-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-12-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-12-800.webp"
+        }
+      ]
+    },
+    {
+      "id": "vilmora-13",
+      "orientation": "portrait",
+      "w": 1066,
+      "h": 1600,
+      "ratio": 0.6663,
+      "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAACwBQCdASoYACQAPu1mpU2ppaMiMBVdUTAdiUAW9wXNmZ931PmDenOKmS6r4wa88FeyTYAhlQAA/uK/slH3FAZjXcQtB2Imdj35pTSnfqREnRmkxX168IrgUVFdua6ZecFzylYx4KQ8dnP9pur1NFZBXyS8fXId2JecnNMOu2WuzaE4q/zX4lRziTqSD4F82UV+gAbQAAA=",
+      "widths": [
+        400,
+        800
+      ],
+      "srcset": "/media/vilmora/vilmora-13-400.webp 400w, /media/vilmora/vilmora-13-800.webp 800w",
+      "src": "/media/vilmora/vilmora-13-800.webp",
+      "sources": [
+        {
+          "w": 400,
+          "src": "/media/vilmora/vilmora-13-400.webp"
+        },
+        {
+          "w": 800,
+          "src": "/media/vilmora/vilmora-13-800.webp"
+        }
+      ]
+    }
+  ],
   "experiments": [
     {
       "id": "experiments-01",
