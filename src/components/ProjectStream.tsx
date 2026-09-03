@@ -82,15 +82,15 @@ export default function ProjectStream({
       {blocks.map((b, idx) => {
         switch (b.kind) {
           case "full":
+            // Full-bleed but uncropped: the image keeps its own aspect ratio.
             return (
-              <div key={idx} className="relative h-[86vh] w-full">
+              <div key={idx} className="w-full">
                 <Media
                   item={b.a}
                   alt={`${title} — plate ${idx + 1}`}
                   sizes="100vw"
                   reveal="scale"
                   priority={idx === 0}
-                  fill
                 />
               </div>
             );
