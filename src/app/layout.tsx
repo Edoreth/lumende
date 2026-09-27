@@ -37,6 +37,8 @@ const jsonLd = {
   url: site.url,
   image: `${site.url}/media/hero/hero-01-1280.webp`,
   email: site.email,
+  telephone: site.phone.e164,
+  hasMap: site.googleProfile,
   priceRange: "$$",
   areaServed: { "@type": "City", name: "Querétaro" },
   address: {
@@ -45,7 +47,7 @@ const jsonLd = {
     addressRegion: "Querétaro",
     addressCountry: "MX",
   },
-  sameAs: [site.instagram.url],
+  sameAs: [site.instagram.url, site.googleProfile],
   knowsAbout: services.map((s) => s.es),
 };
 

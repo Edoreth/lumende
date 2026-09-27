@@ -1,15 +1,24 @@
-// Genera favicon.ico, icon.png y apple-icon.png (marca "L" Bodoni sobre negro).
+// Genera favicon.ico, icon.png y apple-icon.png: destello de luz (lumen) sobre negro.
 import sharp from "sharp";
 import { writeFileSync } from "node:fs";
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="halo" cx="32" cy="32" r="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f3e6c8" stop-opacity=".7"/>
+      <stop offset=".35" stop-color="#e8d2a6" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#e8d2a6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core" cx="32" cy="32" r="7" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f1e9dc"/>
+    </radialGradient>
+  </defs>
   <rect width="64" height="64" fill="#060606"/>
-  <g fill="#e8e6e1">
-    <rect x="17" y="14" width="21" height="2.2"/>
-    <rect x="23" y="14" width="9" height="36"/>
-    <rect x="17" y="47.8" width="31" height="2.2"/>
-    <path d="M40 50 L48 50 L48 38 L46.9 38 Q46.6 45.5 40 48.6 Z"/>
-  </g>
+  <circle cx="32" cy="32" r="26" fill="url(#halo)"/>
+  <path fill="url(#core)" d="M32 5 C32.5 27 34 31.5 59 32 C34 32.5 32.5 37 32 59 C31.5 37 30 32.5 5 32 C30 31.5 31.5 27 32 5 Z"/>
+  <path fill="#f1e9dc" opacity=".5" d="M32 18 C32.4 30 33 31.6 46 32 C33 32.4 32.4 34 32 46 C31.6 34 31 32.4 18 32 C31 31.6 31.6 30 32 18 Z" transform="rotate(45 32 32)"/>
+  <circle cx="32" cy="32" r="4.2" fill="#ffffff"/>
 </svg>`;
 const png = (s) => sharp(Buffer.from(svg), { density: 600 }).resize(s, s).png().toBuffer();
 

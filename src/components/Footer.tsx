@@ -49,6 +49,20 @@ export default function Footer() {
           >
             {site.email}
           </a>
+          <a
+            href={`tel:${site.phone.e164}`}
+            className="label transition-colors hover:text-ink"
+          >
+            {site.phone.display}
+          </a>
+          <a
+            href={site.googleProfile}
+            target="_blank"
+            rel="noreferrer"
+            className="label transition-colors hover:text-ink"
+          >
+            Google
+          </a>
         </div>
       </div>
       <p className="label mt-16 !text-ink-faint !tracking-[0.18em]">

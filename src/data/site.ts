@@ -5,6 +5,10 @@ export const site = {
   tagline: { es: "Fotografía / Luz / Movimiento", en: "Photography / Light / Motion" },
   location: "Querétaro, México",
   email: "lumende.studio@gmail.com",
+  phone: { display: "667 506 3117", e164: "+526675063117" },
+  /** Perfil de Empresa en Google (Maps) */
+  googleProfile: "https://maps.google.com/?cid=2795415320194229196",
+  googleReview: "https://g.page/r/Ccyj3EdsT8smEAI/review",
   instagram: {
     handle: "@lumende.studio",
     url: "https://instagram.com/lumende.studio",

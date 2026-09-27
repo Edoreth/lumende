@@ -42,6 +42,12 @@ export default function ContactPage() {
               {site.email}
             </a>
             <a
+              href={`tel:${site.phone.e164}`}
+              className="font-serif text-[clamp(1.25rem,3vw,2rem)] text-ink-dim transition-colors hover:text-ink"
+            >
+              {site.phone.display}
+            </a>
+            <a
               href={site.instagram.url}
               target="_blank"
               rel="noreferrer"
@@ -50,6 +56,14 @@ export default function ContactPage() {
               {site.instagram.handle}
             </a>
             <p className="label mt-2">{site.location}</p>
+            <a
+              href={site.googleReview}
+              target="_blank"
+              rel="noreferrer"
+              className="label transition-colors hover:text-ink"
+            >
+              <T es="Deja una reseña en Google ↗" en="Leave a Google review ↗" />
+            </a>
           </div>
         </div>
 
